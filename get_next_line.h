@@ -6,7 +6,7 @@
 /*   By: ndesprez <ndesprez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:35:33 by ndesprez          #+#    #+#             */
-/*   Updated: 2023/04/11 16:13:55 by ndesprez         ###   ########.fr       */
+/*   Updated: 2023/04/12 17:31:34 by ndesprez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,10 @@
 # include <unistd.h>
 
 char	*get_next_line(int fd);
+
+void	*ft_calloc(size_t nmemb, size_t size);
+void	ft_bzero(void *s, size_t n);
+int		ft_strchri(const char *s, int c);
+char	*ft_strjoin_bufs(char *s1, char const *s2);
 
 #endif
