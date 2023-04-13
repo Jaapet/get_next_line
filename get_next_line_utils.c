@@ -6,7 +6,7 @@
 /*   By: ndesprez <ndesprez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:37:04 by ndesprez          #+#    #+#             */
-/*   Updated: 2023/04/12 17:31:07 by ndesprez         ###   ########.fr       */
+/*   Updated: 2023/04/13 11:26:12 by ndesprez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 }
 
 // assigns 0 to the 1st 'n' elements in a void*
-/*void	ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 
@@ -44,7 +44,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		((unsigned char *)s)[i] = 0;
 		i++;
 	}
-}*/
+}
 
 size_t	ft_strlen(const char *str)
 {
