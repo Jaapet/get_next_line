@@ -6,7 +6,7 @@
 /*   By: ndesprez <ndesprez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:37:04 by ndesprez          #+#    #+#             */
-/*   Updated: 2023/04/13 11:26:12 by ndesprez         ###   ########.fr       */
+/*   Updated: 2023/04/13 12:37:56 by ndesprez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,6 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
 // returns the index of the 1st occurence of a char in a char*
 // if nothing is found, it returns the size of the char*
 int	ft_strchri(const char *s, int c)
@@ -79,16 +69,16 @@ static size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dstlen;
 
 	i = 0;
-	dstlen = ft_strlen(dst);
+	dstlen = ft_strchri(dst, '\0');
 	if (dstsize <= dstlen)
-		return (ft_strlen(src) + dstsize);
+		return (ft_strchri(src, '\0') + dstsize);
 	while (src[i] && dstlen + i < dstsize - 1)
 	{
 		dst[dstlen + i] = src[i];
 		i++;
 	}
 	dst[dstlen + i] = '\0';
-	return (dstlen + ft_strlen(src));
+	return (dstlen + ft_strchri(src, '\0'));
 }
 
 // concatenates 2 char* in a new char*
@@ -98,7 +88,7 @@ char	*ft_strjoin_bufs(char *s1, char const *s2)
 	char	*str;
 	size_t	len;
 
-	len = ft_strlen(s1) + ft_strlen(s2);
+	len = ft_strchri(s1, '\0') + ft_strchri(s2, '\0');
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);

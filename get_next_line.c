@@ -6,7 +6,7 @@
 /*   By: ndesprez <ndesprez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:35:17 by ndesprez          #+#    #+#             */
-/*   Updated: 2023/04/13 12:27:00 by ndesprez         ###   ########.fr       */
+/*   Updated: 2023/04/13 12:38:59 by ndesprez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ static char	*update_save(char *save)
 			j++;
 		new_save = (char *)ft_calloc(j, sizeof(char));
 		if (!new_save)
-			return (free(save),NULL);
+			return (free(save), NULL);
 		while (j > 0)
 		{
 			new_save[j - 1] = save[i + j];
@@ -91,7 +91,7 @@ static char	*update_save(char *save)
 		}
 		return (free(save), new_save);
 	}
-	return (free(save),NULL);
+	return (free(save), NULL);
 }
 
 char	*get_next_line(int fd)
