@@ -6,7 +6,7 @@
 /*   By: ndesprez <ndesprez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:35:17 by ndesprez          #+#    #+#             */
-/*   Updated: 2023/04/13 12:38:59 by ndesprez         ###   ########.fr       */
+/*   Updated: 2023/04/13 15:04:58 by ndesprez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static char	*get_line(char *src)
 	char	*line;
 	int		i;
 
-	line = (char *)calloc(ft_strchri(src, '\n') + 2, sizeof(char));
+	line = (char *)ft_calloc(ft_strchri(src, '\n') + 2, sizeof(char));
 	if (!line)
 		return (NULL);
 	i = 0;
